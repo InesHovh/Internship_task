@@ -45,23 +45,28 @@ void Server::Start() {
 
 void Server::ClientHandling(int clientSocket) {
     char buffer[4096];
-    int read = recv(clientSocket, buffer, sizeof(buffer), 0);
     
-    if (read == -1) {
-        std::cout << "Failed to receive data from the client" << std::endl;
-    } else if (read == 0) {
-        std::cout << "Client disconnected" << std::endl;
-    } else {
-        buffer[read] = '\0';
-        std::cout << "Received: " << buffer << std::endl;
-
-        std::string response = "Hellooo!";
-
-        int sent = send(clientSocket, response.c_str(), response.length(), 0);
-        if (sent == -1) {
-            std::cout << "Failed to send a response" << std::endl;
+    while (true) {
+        int rec = recv(clientSocket, buffer, sizeof(buffer), 0);
+        
+        if (rec == -1) {
+            std::cout << "Failed to receive data from the client" << std::endl;
+            break;
+        } else if (rec == 0) {
+            std::cout << "Client disconnected" << std::endl;
+            break;
         } else {
-            std::cout << "Response sent: " << response << std::endl;
+            buffer[rec] = '\0';
+            std::cout << "Received: " << buffer << std::endl;
+
+            std::string response = "Hello, client!";
+
+            int sent = send(clientSocket, response.c_str(), response.length(), 0);
+            if (sent == -1) {
+                std::cout << "Failed to send a response" << std::endl;
+            } else {
+                std::cout << "Response sent: " << response << std::endl;
+            }
         }
     }
 

@@ -36,16 +36,16 @@ void Client::Send(const std::string& message)
 std::string Client::Receive()
 {
     char buffer[4096];
-    int received = recv(m_socket, buffer, sizeof(buffer), 0);
+    int rec = recv(m_socket, buffer, sizeof(buffer), 0);
 
-    if (received == -1) {
+    if (rec == -1) {
         std::cout << "Failed to receive data from the server" << std::endl;
         return "";
-    } else if (received == 0) {
+    } else if (rec == 0) {
         std::cout << "Server disconnected" << std::endl;
         return "";
     } else {
-        buffer[received] = '\0';
+        buffer[rec] = '\0';
         return std::string(buffer);
     }
 }
