@@ -3,7 +3,7 @@
 #include <cstring>
 
 int main() {
-    Client client("127.0.0.1", 8080); // Change the server IP and port to match your server setup
+    Client client("127.0.0.1", 8080);
 
     client.Connect();
 
@@ -25,7 +25,7 @@ int main() {
         }
     }
 
-    client.Close(); // Close the connection when the session is done
+    client.Close();
 
     return 0;
 }
