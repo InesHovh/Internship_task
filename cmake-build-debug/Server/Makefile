@@ -130,29 +130,29 @@ Server/fast:
 	cd /home/user/Desktop/Internship_task/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/build
 .PHONY : Server/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
+src/Server.o: src/Server.cpp.o
+.PHONY : src/Server.o
 
 # target to build an object file
-main.cpp.o:
-	cd /home/user/Desktop/Internship_task/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/Server.cpp.o:
+	cd /home/user/Desktop/Internship_task/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/src/Server.cpp.o
+.PHONY : src/Server.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+src/Server.i: src/Server.cpp.i
+.PHONY : src/Server.i
 
 # target to preprocess a source file
-main.cpp.i:
-	cd /home/user/Desktop/Internship_task/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/Server.cpp.i:
+	cd /home/user/Desktop/Internship_task/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/src/Server.cpp.i
+.PHONY : src/Server.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+src/Server.s: src/Server.cpp.s
+.PHONY : src/Server.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	cd /home/user/Desktop/Internship_task/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/Server.cpp.s:
+	cd /home/user/Desktop/Internship_task/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/src/Server.cpp.s
+.PHONY : src/Server.cpp.s
 
 # Help Target
 help:
@@ -163,9 +163,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Server"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... src/Server.o"
+	@echo "... src/Server.i"
+	@echo "... src/Server.s"
 .PHONY : help
 
 

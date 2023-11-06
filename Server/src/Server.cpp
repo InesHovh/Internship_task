@@ -1,6 +1,8 @@
 #include "../headers/Server.hpp"
 
 Server::Server(int port) : m_port(port), m_socket(-1) {
+    // m_driver = sql::mysql::get_mysql_driver_instance();
+
     m_socket = socket(AF_INET, SOCK_STREAM, 0);
     if (m_socket == -1) {
         std::cout << "Failed to create a socket" << std::endl;
@@ -32,16 +34,21 @@ void Server::Start() {
         int clientSocket;
         sockaddr_in clientAddr;
         socklen_t clientAddrSize = sizeof(clientAddr);
-        
+
         clientSocket = accept(m_socket, (sockaddr*)&clientAddr, &clientAddrSize);
         if (clientSocket == -1) {
-            std::cout << "Failed to acceptn" << std::endl;
+            std::cout << "Failed to accept" << std::endl;
             continue;
         }
+
+        std::cout << "Client connected." << std::endl;
+
+        m_clients.push_back(clientSocket);
         std::thread clientThread(&Server::ClientHandling, this, clientSocket);
         clientThread.detach();
     }
 }
+
 
 void Server::ClientHandling(int clientSocket) {
     char buffer[4096];
@@ -74,8 +81,7 @@ void Server::ClientHandling(int clientSocket) {
 }
 
 
-void Server::SendingMessages() {
-    std::string message = "Server message to client";
+void Server::SendingMessages(const std::string& message) {
     std::lock_guard<std::mutex> lock(m_mutex);
 
     for (int clientSocket : m_clients) {
@@ -88,6 +94,7 @@ void Server::SendingMessages() {
     }
 }
 
+
 void Server::Close()
 {
     if (m_socket != -1){
@@ -99,4 +106,33 @@ void Server::Close()
 
 Server::~Server() {
     Close();
+}
+
+void Server::ServerCommandListener() {
+    while (true) {
+        std::string command;
+        std::getline(std::cin, command);
+        SendingMessages(command);
+    }
+}
+
+int main() {
+    Server server(8080);
+
+    std::thread serverThread(&Server::Start, &server);
+    serverThread.detach();
+
+    std::thread commandListener(&Server::ServerCommandListener, &server);
+    commandListener.detach();
+
+    while (true) {
+        std::string message;
+        std::cout << "Enter a message to send to client: " << std::endl;;
+        std::getline(std::cin, message);
+        server.SendingMessages(message);
+    }
+
+    server.Close();
+
+    return 0;
 }

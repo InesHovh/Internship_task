@@ -6,7 +6,12 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <string>
+#include <thread>
 #include <unistd.h>
+#include <cstring>
+// #include <mysql_driver.h>
+// #include <mysql_connection.h>
+
 
 class Client
 {
@@ -18,6 +23,7 @@ public:
     void Connect();
     void Send(const std::string& message);
     std::string Receive();
+    void ReceiveMessages();
     void Close();
 
     ~Client();

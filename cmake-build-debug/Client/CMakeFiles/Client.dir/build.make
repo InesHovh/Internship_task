@@ -69,28 +69,28 @@ include Client/CMakeFiles/Client.dir/progress.make
 # Include the compile flags for this target's objects.
 include Client/CMakeFiles/Client.dir/flags.make
 
-Client/CMakeFiles/Client.dir/main.cpp.o: Client/CMakeFiles/Client.dir/flags.make
-Client/CMakeFiles/Client.dir/main.cpp.o: ../Client/main.cpp
-Client/CMakeFiles/Client.dir/main.cpp.o: Client/CMakeFiles/Client.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/Desktop/Internship_task/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Client/CMakeFiles/Client.dir/main.cpp.o"
-	cd /home/user/Desktop/Internship_task/cmake-build-debug/Client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Client/CMakeFiles/Client.dir/main.cpp.o -MF CMakeFiles/Client.dir/main.cpp.o.d -o CMakeFiles/Client.dir/main.cpp.o -c /home/user/Desktop/Internship_task/Client/main.cpp
+Client/CMakeFiles/Client.dir/src/Client.cpp.o: Client/CMakeFiles/Client.dir/flags.make
+Client/CMakeFiles/Client.dir/src/Client.cpp.o: ../Client/src/Client.cpp
+Client/CMakeFiles/Client.dir/src/Client.cpp.o: Client/CMakeFiles/Client.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/Desktop/Internship_task/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Client/CMakeFiles/Client.dir/src/Client.cpp.o"
+	cd /home/user/Desktop/Internship_task/cmake-build-debug/Client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Client/CMakeFiles/Client.dir/src/Client.cpp.o -MF CMakeFiles/Client.dir/src/Client.cpp.o.d -o CMakeFiles/Client.dir/src/Client.cpp.o -c /home/user/Desktop/Internship_task/Client/src/Client.cpp
 
-Client/CMakeFiles/Client.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Client.dir/main.cpp.i"
-	cd /home/user/Desktop/Internship_task/cmake-build-debug/Client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/Desktop/Internship_task/Client/main.cpp > CMakeFiles/Client.dir/main.cpp.i
+Client/CMakeFiles/Client.dir/src/Client.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Client.dir/src/Client.cpp.i"
+	cd /home/user/Desktop/Internship_task/cmake-build-debug/Client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/Desktop/Internship_task/Client/src/Client.cpp > CMakeFiles/Client.dir/src/Client.cpp.i
 
-Client/CMakeFiles/Client.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client.dir/main.cpp.s"
-	cd /home/user/Desktop/Internship_task/cmake-build-debug/Client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/Desktop/Internship_task/Client/main.cpp -o CMakeFiles/Client.dir/main.cpp.s
+Client/CMakeFiles/Client.dir/src/Client.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client.dir/src/Client.cpp.s"
+	cd /home/user/Desktop/Internship_task/cmake-build-debug/Client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/Desktop/Internship_task/Client/src/Client.cpp -o CMakeFiles/Client.dir/src/Client.cpp.s
 
 # Object files for target Client
 Client_OBJECTS = \
-"CMakeFiles/Client.dir/main.cpp.o"
+"CMakeFiles/Client.dir/src/Client.cpp.o"
 
 # External object files for target Client
 Client_EXTERNAL_OBJECTS =
 
-Client/Client: Client/CMakeFiles/Client.dir/main.cpp.o
+Client/Client: Client/CMakeFiles/Client.dir/src/Client.cpp.o
 Client/Client: Client/CMakeFiles/Client.dir/build.make
 Client/Client: Client/CMakeFiles/Client.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/user/Desktop/Internship_task/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Client"

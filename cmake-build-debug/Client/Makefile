@@ -130,29 +130,29 @@ Client/fast:
 	cd /home/user/Desktop/Internship_task/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Client/CMakeFiles/Client.dir/build.make Client/CMakeFiles/Client.dir/build
 .PHONY : Client/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
+src/Client.o: src/Client.cpp.o
+.PHONY : src/Client.o
 
 # target to build an object file
-main.cpp.o:
-	cd /home/user/Desktop/Internship_task/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Client/CMakeFiles/Client.dir/build.make Client/CMakeFiles/Client.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/Client.cpp.o:
+	cd /home/user/Desktop/Internship_task/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Client/CMakeFiles/Client.dir/build.make Client/CMakeFiles/Client.dir/src/Client.cpp.o
+.PHONY : src/Client.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+src/Client.i: src/Client.cpp.i
+.PHONY : src/Client.i
 
 # target to preprocess a source file
-main.cpp.i:
-	cd /home/user/Desktop/Internship_task/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Client/CMakeFiles/Client.dir/build.make Client/CMakeFiles/Client.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/Client.cpp.i:
+	cd /home/user/Desktop/Internship_task/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Client/CMakeFiles/Client.dir/build.make Client/CMakeFiles/Client.dir/src/Client.cpp.i
+.PHONY : src/Client.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+src/Client.s: src/Client.cpp.s
+.PHONY : src/Client.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	cd /home/user/Desktop/Internship_task/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Client/CMakeFiles/Client.dir/build.make Client/CMakeFiles/Client.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/Client.cpp.s:
+	cd /home/user/Desktop/Internship_task/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Client/CMakeFiles/Client.dir/build.make Client/CMakeFiles/Client.dir/src/Client.cpp.s
+.PHONY : src/Client.cpp.s
 
 # Help Target
 help:
@@ -163,9 +163,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Client"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... src/Client.o"
+	@echo "... src/Client.i"
+	@echo "... src/Client.s"
 .PHONY : help
 
 

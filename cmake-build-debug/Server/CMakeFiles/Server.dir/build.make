@@ -69,28 +69,28 @@ include Server/CMakeFiles/Server.dir/progress.make
 # Include the compile flags for this target's objects.
 include Server/CMakeFiles/Server.dir/flags.make
 
-Server/CMakeFiles/Server.dir/main.cpp.o: Server/CMakeFiles/Server.dir/flags.make
-Server/CMakeFiles/Server.dir/main.cpp.o: ../Server/main.cpp
-Server/CMakeFiles/Server.dir/main.cpp.o: Server/CMakeFiles/Server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/Desktop/Internship_task/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Server/CMakeFiles/Server.dir/main.cpp.o"
-	cd /home/user/Desktop/Internship_task/cmake-build-debug/Server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Server/CMakeFiles/Server.dir/main.cpp.o -MF CMakeFiles/Server.dir/main.cpp.o.d -o CMakeFiles/Server.dir/main.cpp.o -c /home/user/Desktop/Internship_task/Server/main.cpp
+Server/CMakeFiles/Server.dir/src/Server.cpp.o: Server/CMakeFiles/Server.dir/flags.make
+Server/CMakeFiles/Server.dir/src/Server.cpp.o: ../Server/src/Server.cpp
+Server/CMakeFiles/Server.dir/src/Server.cpp.o: Server/CMakeFiles/Server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/Desktop/Internship_task/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Server/CMakeFiles/Server.dir/src/Server.cpp.o"
+	cd /home/user/Desktop/Internship_task/cmake-build-debug/Server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Server/CMakeFiles/Server.dir/src/Server.cpp.o -MF CMakeFiles/Server.dir/src/Server.cpp.o.d -o CMakeFiles/Server.dir/src/Server.cpp.o -c /home/user/Desktop/Internship_task/Server/src/Server.cpp
 
-Server/CMakeFiles/Server.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/main.cpp.i"
-	cd /home/user/Desktop/Internship_task/cmake-build-debug/Server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/Desktop/Internship_task/Server/main.cpp > CMakeFiles/Server.dir/main.cpp.i
+Server/CMakeFiles/Server.dir/src/Server.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/src/Server.cpp.i"
+	cd /home/user/Desktop/Internship_task/cmake-build-debug/Server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/Desktop/Internship_task/Server/src/Server.cpp > CMakeFiles/Server.dir/src/Server.cpp.i
 
-Server/CMakeFiles/Server.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/main.cpp.s"
-	cd /home/user/Desktop/Internship_task/cmake-build-debug/Server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/Desktop/Internship_task/Server/main.cpp -o CMakeFiles/Server.dir/main.cpp.s
+Server/CMakeFiles/Server.dir/src/Server.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/src/Server.cpp.s"
+	cd /home/user/Desktop/Internship_task/cmake-build-debug/Server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/Desktop/Internship_task/Server/src/Server.cpp -o CMakeFiles/Server.dir/src/Server.cpp.s
 
 # Object files for target Server
 Server_OBJECTS = \
-"CMakeFiles/Server.dir/main.cpp.o"
+"CMakeFiles/Server.dir/src/Server.cpp.o"
 
 # External object files for target Server
 Server_EXTERNAL_OBJECTS =
 
-Server/Server: Server/CMakeFiles/Server.dir/main.cpp.o
+Server/Server: Server/CMakeFiles/Server.dir/src/Server.cpp.o
 Server/Server: Server/CMakeFiles/Server.dir/build.make
 Server/Server: Server/CMakeFiles/Server.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/user/Desktop/Internship_task/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Server"
