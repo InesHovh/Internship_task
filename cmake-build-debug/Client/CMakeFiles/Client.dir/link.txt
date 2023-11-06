@@ -1,1 +1,1 @@
-/usr/bin/c++ -rdynamic CMakeFiles/Client.dir/src/Client.cpp.o -o Client 
+/usr/bin/c++ -rdynamic CMakeFiles/Client.dir/src/Client.cpp.o -o Client  -lpq 

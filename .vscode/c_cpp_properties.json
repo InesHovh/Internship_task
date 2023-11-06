@@ -1,0 +1,17 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",  // Include your project directory and subdirectories
+                "/usr/include/postgresql"  // Adjust this path to the PostgreSQL include directory
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/g++",  // Adjust the compiler path as needed
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}
