@@ -1,5 +1,9 @@
 /home/user/Desktop/Internship_task/cmake-build-debug/CMakeFiles/edit_cache.dir
 /home/user/Desktop/Internship_task/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/user/Desktop/Internship_task/cmake-build-debug/DB/CMakeFiles/DB.dir
+/home/user/Desktop/Internship_task/cmake-build-debug/DB/CMakeFiles/HTTP.dir
+/home/user/Desktop/Internship_task/cmake-build-debug/DB/CMakeFiles/edit_cache.dir
+/home/user/Desktop/Internship_task/cmake-build-debug/DB/CMakeFiles/rebuild_cache.dir
 /home/user/Desktop/Internship_task/cmake-build-debug/Server/CMakeFiles/Server.dir
 /home/user/Desktop/Internship_task/cmake-build-debug/Server/CMakeFiles/edit_cache.dir
 /home/user/Desktop/Internship_task/cmake-build-debug/Server/CMakeFiles/rebuild_cache.dir

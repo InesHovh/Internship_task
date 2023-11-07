@@ -117,6 +117,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named DB
+
+# Build rule for target.
+DB: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 DB
+.PHONY : DB
+
+# fast build rule for target.
+DB/fast:
+	$(MAKE) $(MAKESILENT) -f DB/CMakeFiles/DB.dir/build.make DB/CMakeFiles/DB.dir/build
+.PHONY : DB/fast
+
+#=============================================================================
+# Target rules for targets named HTTP
+
+# Build rule for target.
+HTTP: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 HTTP
+.PHONY : HTTP
+
+# fast build rule for target.
+HTTP/fast:
+	$(MAKE) $(MAKESILENT) -f DB/CMakeFiles/HTTP.dir/build.make DB/CMakeFiles/HTTP.dir/build
+.PHONY : HTTP/fast
+
+#=============================================================================
 # Target rules for targets named Server
 
 # Build rule for target.
@@ -151,6 +177,8 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Client"
+	@echo "... DB"
+	@echo "... HTTP"
 	@echo "... Server"
 .PHONY : help
 

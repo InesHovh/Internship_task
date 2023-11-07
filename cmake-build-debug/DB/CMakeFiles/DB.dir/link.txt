@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/DB.dir/src/DB.cpp.o -o DB  -lpq 

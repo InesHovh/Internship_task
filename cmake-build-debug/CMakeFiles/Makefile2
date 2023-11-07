@@ -63,16 +63,19 @@ CMAKE_BINARY_DIR = /home/user/Desktop/Internship_task/cmake-build-debug
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: DB/all
 all: Server/all
 all: Client/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
+preinstall: DB/preinstall
 preinstall: Server/preinstall
 preinstall: Client/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: DB/clean
 clean: Server/clean
 clean: Client/clean
 .PHONY : clean
@@ -93,6 +96,23 @@ Client/clean: Client/CMakeFiles/Client.dir/clean
 .PHONY : Client/clean
 
 #=============================================================================
+# Directory level rules for directory DB
+
+# Recursive "all" directory target.
+DB/all: DB/CMakeFiles/DB.dir/all
+DB/all: DB/CMakeFiles/HTTP.dir/all
+.PHONY : DB/all
+
+# Recursive "preinstall" directory target.
+DB/preinstall:
+.PHONY : DB/preinstall
+
+# Recursive "clean" directory target.
+DB/clean: DB/CMakeFiles/DB.dir/clean
+DB/clean: DB/CMakeFiles/HTTP.dir/clean
+.PHONY : DB/clean
+
+#=============================================================================
 # Directory level rules for directory Server
 
 # Recursive "all" directory target.
@@ -108,13 +128,65 @@ Server/clean: Server/CMakeFiles/Server.dir/clean
 .PHONY : Server/clean
 
 #=============================================================================
+# Target rules for target DB/CMakeFiles/DB.dir
+
+# All Build rule for target.
+DB/CMakeFiles/DB.dir/all:
+	$(MAKE) $(MAKESILENT) -f DB/CMakeFiles/DB.dir/build.make DB/CMakeFiles/DB.dir/depend
+	$(MAKE) $(MAKESILENT) -f DB/CMakeFiles/DB.dir/build.make DB/CMakeFiles/DB.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/Desktop/Internship_task/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target DB"
+.PHONY : DB/CMakeFiles/DB.dir/all
+
+# Build rule for subdir invocation for target.
+DB/CMakeFiles/DB.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/Desktop/Internship_task/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 DB/CMakeFiles/DB.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/Desktop/Internship_task/cmake-build-debug/CMakeFiles 0
+.PHONY : DB/CMakeFiles/DB.dir/rule
+
+# Convenience name for target.
+DB: DB/CMakeFiles/DB.dir/rule
+.PHONY : DB
+
+# clean rule for target.
+DB/CMakeFiles/DB.dir/clean:
+	$(MAKE) $(MAKESILENT) -f DB/CMakeFiles/DB.dir/build.make DB/CMakeFiles/DB.dir/clean
+.PHONY : DB/CMakeFiles/DB.dir/clean
+
+#=============================================================================
+# Target rules for target DB/CMakeFiles/HTTP.dir
+
+# All Build rule for target.
+DB/CMakeFiles/HTTP.dir/all:
+	$(MAKE) $(MAKESILENT) -f DB/CMakeFiles/HTTP.dir/build.make DB/CMakeFiles/HTTP.dir/depend
+	$(MAKE) $(MAKESILENT) -f DB/CMakeFiles/HTTP.dir/build.make DB/CMakeFiles/HTTP.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/Desktop/Internship_task/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target HTTP"
+.PHONY : DB/CMakeFiles/HTTP.dir/all
+
+# Build rule for subdir invocation for target.
+DB/CMakeFiles/HTTP.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/Desktop/Internship_task/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 DB/CMakeFiles/HTTP.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/Desktop/Internship_task/cmake-build-debug/CMakeFiles 0
+.PHONY : DB/CMakeFiles/HTTP.dir/rule
+
+# Convenience name for target.
+HTTP: DB/CMakeFiles/HTTP.dir/rule
+.PHONY : HTTP
+
+# clean rule for target.
+DB/CMakeFiles/HTTP.dir/clean:
+	$(MAKE) $(MAKESILENT) -f DB/CMakeFiles/HTTP.dir/build.make DB/CMakeFiles/HTTP.dir/clean
+.PHONY : DB/CMakeFiles/HTTP.dir/clean
+
+#=============================================================================
 # Target rules for target Server/CMakeFiles/Server.dir
 
 # All Build rule for target.
 Server/CMakeFiles/Server.dir/all:
 	$(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/depend
 	$(MAKE) $(MAKESILENT) -f Server/CMakeFiles/Server.dir/build.make Server/CMakeFiles/Server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/Desktop/Internship_task/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target Server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/Desktop/Internship_task/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target Server"
 .PHONY : Server/CMakeFiles/Server.dir/all
 
 # Build rule for subdir invocation for target.

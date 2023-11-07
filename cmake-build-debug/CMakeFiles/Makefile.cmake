@@ -9,6 +9,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "../CMakeLists.txt"
   "../Client/CMakeLists.txt"
+  "../DB/CMakeLists.txt"
   "../Server/CMakeLists.txt"
   "CMakeFiles/3.22.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.22.1/CMakeCXXCompiler.cmake"
@@ -41,12 +42,15 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "DB/CMakeFiles/CMakeDirectoryInformation.cmake"
   "Server/CMakeFiles/CMakeDirectoryInformation.cmake"
   "Client/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "DB/CMakeFiles/DB.dir/DependInfo.cmake"
+  "DB/CMakeFiles/HTTP.dir/DependInfo.cmake"
   "Server/CMakeFiles/Server.dir/DependInfo.cmake"
   "Client/CMakeFiles/Client.dir/DependInfo.cmake"
   )
