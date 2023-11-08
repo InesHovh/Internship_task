@@ -10,7 +10,7 @@ void HTTP::Create() const{
         tcp::socket socket(io_context);
 
         tcp::endpoint endpoint(boost::asio::ip::address::from_string("127.0.0.1"), 5432);
-        std::cout << "***********************" << std::endl;
+        // std::cout << "***********************" << std::endl;
         socket.connect(endpoint);
         std::cout << "Connection..." << std::endl;
 
@@ -104,6 +104,4 @@ int main(){
     http.Read();
     http.Update();
     http.Delete();
-
-    // std::cout << "Hello" << std::endl;
 }

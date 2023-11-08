@@ -4,8 +4,6 @@
 
 class IDB
 {
-private:
-    
 public:
     virtual void Create() const = 0;
     virtual void Read() const = 0;

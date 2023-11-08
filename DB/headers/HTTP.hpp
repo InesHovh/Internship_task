@@ -4,10 +4,8 @@
 #include <boost/asio.hpp>
 #include "IDB.hpp"
 
-class HTTP : private IDB
+class HTTP : public IDB
 {
-private:
-    
 public:
     HTTP() {};
 

@@ -7,7 +7,7 @@
 class DB : public IDB
 {
 public:
-    DB();
+    DB() {};
     void Create();
     void Read();
     void Update();
