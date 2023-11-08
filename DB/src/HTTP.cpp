@@ -22,6 +22,42 @@ void HTTP::Create() const{
     }
 }
 
+// void HTTP::Read() const {
+//     try {
+//         boost::asio::io_context io_context;
+//         tcp::socket socket(io_context);
+
+//         tcp::resolver resolver(io_context);
+//         tcp::resolver::results_type endpoints = resolver.resolve("www.google.com", "https");
+
+//         boost::asio::connect(socket, endpoints);
+
+//         std::string req = "GET / HTTP/1.1\r\nHost: www.google.com\r\n\r\n";
+
+//         std::cout << boost::asio::write(socket, boost::asio::buffer(req)) << std::endl;
+
+//         boost::asio::streambuf response;
+//         boost::system::error_code error;
+
+//         std::cout << boost::asio::read(socket, response, boost::asio::transfer_at_least(1), error) << std::endl;
+
+
+//         if (error != boost::asio::error::eof) {
+//             std::cerr << "Error reading response: " << error.message() << std::endl;
+//         } else {
+//             std::istream response_stream(&response);
+//             std::string response_data;
+//             response_stream >> response_data;
+//             std::cout << response_data << std::endl;
+//         }
+
+//         socket.close();
+//     } catch (const boost::system::system_error& e) {
+//         std::cerr << "Boost.Asio system error in Read: " << e.what() << std::endl;
+//         std::cerr << "Error code: " << e.code() << std::endl;
+//     }
+// }
+
 void HTTP::Read() const{
     try
     {
@@ -29,11 +65,11 @@ void HTTP::Read() const{
         tcp::socket socket(io_context);
 
         tcp::resolver resolver(io_context);
-        tcp::resolver::results_type endpoints = resolver.resolve("www.google.com", "443");
+        tcp::resolver::results_type endpoints = resolver.resolve("api.example.com", "8443");
         
         boost::asio::connect(socket, endpoints);
 
-        std::string req = "GET /data HTTP/1.1\r\nHost: www.google.com\r\n\r\n";
+        std::string req = "GET /data HTTP/1.1\r\nHost: api.example.com\r\n\r\n";
 
         std::cout << boost::asio::write(socket, boost::asio::buffer(req)) << std::endl;
 
@@ -102,6 +138,8 @@ int main(){
 
     http.Create();
     http.Read();
-    http.Update();
-    http.Delete();
+    // http.Update();
+    // http.Delete();
+
+    return 0;
 }
